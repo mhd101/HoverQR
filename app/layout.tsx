@@ -22,7 +22,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HoverQR - Instantly Scan & Generate",
     description: "Scan or generate QR codes instantly by hovering over links and images. No clicks required.",
-    url: "https://hoverqr.com",
+    url: "https://hoverqr.in",
     siteName: "HoverQR"
   }
 };
