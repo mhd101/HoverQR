@@ -1,0 +1,1 @@
+# HoverQR---Instantly-Scan-Generate

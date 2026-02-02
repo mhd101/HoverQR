@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+/* #6366f1 -> for buttons*/
+/* #1d2739 -> for background */
+
+:root {
+  --font-inter: 'Inter', sans-serif;
+}
+
+body {
+  color: #ffffff;
+  background-color: #1d2739;
+  font-family: var(--font-inter), system-ui, sans-serif;;
+  -webkit-font-smoothing: antialiased;
+}
+
+html {
+  scroll-behavior: smooth;
+}
