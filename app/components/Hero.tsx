@@ -42,7 +42,6 @@ export default function Hero() {
       </p>
 
       {/* CTA */}
-      {/* CTA */}
       <div className="flex justify-center mt-10">
         <a
           href="https://chromewebstore.google.com/detail/mjgheejcnmceaaobpilbpmehlpkbigmp?utm_source=item-share-cb"
@@ -83,8 +82,8 @@ export default function Hero() {
         </a>
       </div>
 
-      <p className="mt-4 text-lg text-white/80">
-        The fastest way to work with QR codes in Chrome
+      <p className="mt-4 text-base sm:text-lg text-white/80">
+        The fastest way to work with QR codes in your browser.
       </p>
 
     </section>
