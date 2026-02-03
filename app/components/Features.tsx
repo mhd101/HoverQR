@@ -62,7 +62,7 @@ export default function Features() {
             autoPlay
             muted
             playsInline
-            preload="metadata"
+            preload="auto"
             onEnded={next}
             className="w-full aspect-video object-cover"
           />

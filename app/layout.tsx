@@ -12,11 +12,17 @@ export const metadata: Metadata = {
   title: "HoverQR - Instantly Scan & Generate",
   description: "Scan or generate QR codes instantly by hovering over links and images. No clicks required.",
   keywords: [
-    "QR code scanner",
-    "QR code generator",
-    "hover QR",
-    "scan QR code on desktop",
-    "Chrome QR extension"
+    "qr code scanner",
+    "qr code generator",
+    "hoverqr",
+    "scan QR code on browser",
+    "qr code extension",
+    "qr code",
+    "hover qr",
+    "hover to scan qr",
+    "qr code reader",
+    "qr code reader extension",
+    "qr code chrome extension"
   ],
   robots: "index, follow",
   openGraph: {
@@ -34,6 +40,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q1YV0LZMHJ"></script>
+      </head>
       <body
         className={`${inter.variable} antialiased`}
       >
