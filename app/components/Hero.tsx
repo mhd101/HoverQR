@@ -27,7 +27,7 @@ export default function Hero() {
 
       {/* Headings */}
       <div>
-        <h1 className="text-4xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white">
+        <h1 className="text-5xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white">
           <span className="text-brand">Hover<span className="text-[#6366f1]">QR</span></span>
         </h1>
         <h2 className="mt-2 text-2xl sm:text-3xl md:text-5xl font-semibold ">
@@ -41,6 +41,7 @@ export default function Hero() {
         Works everywhere—even inside videos. No clicks, no friction.
       </p>
 
+      {/* CTA */}
       {/* CTA */}
       <div className="flex justify-center mt-10">
         <a
@@ -57,6 +58,7 @@ export default function Hero() {
       hover:shadow-[0_0_30px_rgba(99,102,241,0.65)]
       active:scale-100
       focus:outline-none
+      group
     "
         >
           {/* Glow layer */}
@@ -64,9 +66,9 @@ export default function Hero() {
             className="
         absolute inset-0 rounded-lg
         bg-[#6366f1]
-        opacity-0 blur-xl
+        opacity-40 blur-xl
         transition-opacity duration-300
-        hover:opacity-60
+        group-hover:opacity-70
         -z-10
       "
           />
@@ -81,6 +83,9 @@ export default function Hero() {
         </a>
       </div>
 
+      <p className="mt-4 text-lg text-white/80">
+        The fastest way to work with QR codes in Chrome
+      </p>
 
     </section>
   );

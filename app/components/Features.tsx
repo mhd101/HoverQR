@@ -1,6 +1,8 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
+import { ArrowLeft, ArrowRight } from "lucide-react";
+
 
 const features = [
   { id: "scan", title: "Hover to Scan QR", video: "/videos/HoverToScan.webm" },
@@ -69,9 +71,9 @@ export default function Features() {
       <div className="mt-10 flex items-center justify-center gap-6">
         <button
           onClick={prev}
-          className="p-3 rounded-full border border-white/20 hover:border-[#6366f1]"
+          className="p-3 rounded-full border border-white/20 hover:border-[#6366f1] cursor-pointer"
         >
-          ‹
+          <ArrowLeft className="w-5 h-5" />
         </button>
 
         <h3 className="text-xl md:text-2xl font-semibold text-white text-center">
@@ -80,9 +82,9 @@ export default function Features() {
 
         <button
           onClick={next}
-          className="p-3 rounded-full border border-white/20 hover:border-[#6366f1]"
+          className="p-3 rounded-full border border-white/20 hover:border-[#6366f1] cursor-pointer"
         >
-          ›
+          <ArrowRight className="w-5 h-5" />
         </button>
       </div>
     </section>
