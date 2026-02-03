@@ -47,8 +47,30 @@ export default function Hero() {
           href="https://chromewebstore.google.com/detail/mjgheejcnmceaaobpilbpmehlpkbigmp?utm_source=item-share-cb"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-[#6366f1] inline-flex items-center gap-2 px-6 py-3 rounded-lg text-base sm:text-lg font-semibold text-white cursor-pointer transition-opacity duration-300 hover:opacity-90 active:opacity-100"
+          className="
+      relative inline-flex items-center gap-2
+      px-6 py-3 rounded-lg
+      text-base sm:text-lg font-semibold text-white
+      bg-[#6366f1]
+      transition-all duration-300 ease-out
+      hover:-translate-y-1 hover:scale-[1.03]
+      hover:shadow-[0_0_30px_rgba(99,102,241,0.65)]
+      active:scale-100
+      focus:outline-none
+    "
         >
+          {/* Glow layer */}
+          <span
+            className="
+        absolute inset-0 rounded-lg
+        bg-[#6366f1]
+        opacity-0 blur-xl
+        transition-opacity duration-300
+        hover:opacity-60
+        -z-10
+      "
+          />
+
           <Image
             src="/images/chrome.png"
             alt="Chrome Logo"
@@ -57,8 +79,8 @@ export default function Hero() {
           />
           Add to Chrome – Free
         </a>
-
       </div>
+
 
     </section>
   );
