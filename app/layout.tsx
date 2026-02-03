@@ -24,7 +24,17 @@ export const metadata: Metadata = {
     "qr code reader extension",
     "qr code chrome extension"
   ],
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
   openGraph: {
     title: "HoverQR - Instantly Scan & Generate",
     description: "Scan or generate QR codes instantly by hovering over links and images. No clicks required.",
