@@ -1,4 +1,11 @@
+"use client";
+
+import { usePathname } from "next/navigation";
+
 export default function Footer() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
+
   return (
     <footer className="bg-white border-t border-slate-200">
       <div className="max-w-6xl mx-auto px-4 py-12">
@@ -20,17 +27,32 @@ export default function Footer() {
           {/* Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
 
-            {/* Product */}
-            <div>
-              <h4 className="text-sm font-semibold text-slate-900">
-                Product
-              </h4>
-              <ul className="mt-4 space-y-2 text-sm text-slate-600">
-                <li><a href="#features" className="hover:text-[#6366f1]">Features</a></li>
-                <li><a href="#pricing" className="hover:text-[#6366f1]">Pricing</a></li>
-                <li><a href="#faq" className="hover:text-[#6366f1]">FAQ</a></li>
-              </ul>
-            </div>
+            {/* Product – ONLY on Home */}
+            {isHome && (
+              <div>
+                <h4 className="text-sm font-semibold text-slate-900">
+                  Product
+                </h4>
+
+                <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                  <li>
+                    <a href="#features" className="hover:text-[#6366f1]">
+                      Features
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#pricing" className="hover:text-[#6366f1]">
+                      Pricing
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#faq" className="hover:text-[#6366f1]">
+                      FAQ
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            )}
 
             {/* Legal */}
             <div>
@@ -38,12 +60,41 @@ export default function Footer() {
                 Legal
               </h4>
               <ul className="mt-4 space-y-2 text-sm text-slate-600">
-                <li><a href="/privacy" className="hover:text-[#6366f1]">Privacy Policy</a></li>
-                <li><a href="/terms" className="hover:text-[#6366f1]">Terms of Service</a></li>
+                <li>
+                  <a
+                    href="/privacy-policy"
+                    className="hover:text-[#6366f1]"
+                  >
+                    Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/terms-of-service"
+                    className="hover:text-[#6366f1]"
+                  >
+                    Terms of Service
+                  </a>
+                </li>
               </ul>
             </div>
 
-            
+            {/* Contact */}
+            <div>
+              <h4 className="text-sm font-semibold text-slate-900">
+                Contact
+              </h4>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                <li>
+                  <a
+                    href="/contact-us"
+                    className="hover:text-[#6366f1]"
+                  >
+                    Contact Us
+                  </a>
+                </li>
+              </ul>
+            </div>
 
           </div>
         </div>
@@ -53,7 +104,6 @@ export default function Footer() {
           <p className="text-sm text-slate-500">
             © {new Date().getFullYear()} HoverQR. All rights reserved.
           </p>
-
         </div>
 
       </div>
