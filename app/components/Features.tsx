@@ -3,11 +3,11 @@
 import { useState, useRef, useEffect } from "react";
 
 const features = [
-  { id: "scan", title: "Hover to Scan QR", video: "/videos/HoverToScan.mp4" },
-  { id: "generate-link", title: "Hover to Generate QR", video: "/videos/HoverToGenerate.mp4" },
-  { id: "history", title: "Save QR History", video: "/videos/SaveHistory.mp4" },
-  { id: "snip", title: "Snip & Scan QR", video: "/videos/SnipToScan.mp4" },
-  { id: "text", title: "Generate QR from Text", video: "/videos/SelectToGenerate.mp4" },
+  { id: "scan", title: "Hover to Scan QR", video: "/videos/HoverToScan.webm" },
+  { id: "generate-link", title: "Hover to Generate QR", video: "/videos/HoverToGenerate.webm" },
+  { id: "history", title: "Save QR History", video: "/videos/SaveHistory.webm" },
+  { id: "snip", title: "Snip & Scan QR", video: "/videos/SnipToScan.webm" },
+  { id: "text", title: "Generate QR from Text", video: "/videos/SelectToGenerate.webm" },
 ];
 
 function useVideoCache(videos: string[]) {
