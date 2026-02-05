@@ -10,5 +10,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
+    sitemap: "https://hoverqr.in/sitemap.xml",
   };
 }
