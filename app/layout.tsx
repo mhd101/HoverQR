@@ -11,7 +11,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: "HoverQR - Instantly Scan & Generate",
-  description: "Scan or generate QR codes instantly by hovering over links and images. No clicks required.",
+  description: "Scan or generate QR codes instantly by just hovering over links and images. No clicks required.",
   keywords: [
     "qr code scanner",
     "qr code generator",
@@ -19,6 +19,7 @@ export const metadata: Metadata = {
     "scan QR code on browser",
     "qr code extension",
     "qr code",
+    "free static qr code generator",
     "hover qr",
     "hover to scan qr",
     "qr code reader",
