@@ -23,6 +23,46 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: "https://hoverqr.in/contact-us",
         lastModified: new Date(),
         priority: 0.8,
+    },
+    {
+        url: "https://hoverqr.in/credits",
+        lastModified: new Date(),
+        priority: 0.8,
+    },
+    {
+      url: "https://hoverqr.in/free-tools",
+      lastModified: new Date(),
+      priority: 0.9,
+    },
+    {
+        url: "https://hoverqr.in/free-tools/url-qr-generator",
+        lastModified: new Date(),
+        priority: 0.9,  
+    },
+    {
+        url: "https://hoverqr.in/free-tools/text-qr-generator",
+        lastModified: new Date(),
+        priority: 0.9,  
+    },
+    {
+        url: "https://hoverqr.in/free-tools/email-qr-generator",
+        lastModified: new Date(),
+        priority: 0.9,  
+    },
+    {
+        url: "https://hoverqr.in/free-tools/phone-qr-generator",
+        lastModified: new Date(),
+        priority: 0.9,
+    },
+    {
+        url: "https://hoverqr.in/free-tools/sms-qr-generator",
+        lastModified: new Date(),
+        priority: 0.9,
+    },
+    {
+        url: "https://hoverqr.in/free-tools/wifi-qr-generator",
+        lastModified: new Date(),
+        priority: 0.9,
     }
   ];
 }
