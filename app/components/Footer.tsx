@@ -1,10 +1,8 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 export default function Footer() {
-  const pathname = usePathname();
-  const isHome = pathname === "/";
 
   return (
     <footer className="bg-white border-t border-slate-200">
@@ -15,44 +13,99 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <h3 className="text-xl font-bold text-slate-900">
-              Hover<span className="text-[#6366f1]">QR</span>
-            </h3>
+            <Link href="/" className="text-3xl font-bold text-slate-900">
+              Hover<span className="text-indigo-500">QR</span>
+            </Link>
             <p className="mt-3 text-sm text-slate-600 max-w-xs">
-              Instantly scan and generate QR codes by hovering.
-              No clicks. No friction.
+              Instantly scan and generate QR codes just by hovering.
+              No clicks. No downloads.
             </p>
           </div>
 
           {/* Links */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-8">
 
-            {/* Product – ONLY on Home */}
-            {isHome && (
-              <div>
-                <h4 className="text-sm font-semibold text-slate-900">
-                  Product
-                </h4>
+            {/* Product */}
+            <div>
+              <h4 className="text-sm font-semibold text-slate-900">
+                Product
+              </h4>
 
-                <ul className="mt-4 space-y-2 text-sm text-slate-600">
-                  <li>
-                    <a href="#features" className="hover:text-[#6366f1]">
-                      Features
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#pricing" className="hover:text-[#6366f1]">
-                      Pricing
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#faq" className="hover:text-[#6366f1]">
-                      FAQ
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            )}
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                <li>
+                  <Link href="/#features" className="hover:text-indigo-500">
+                    Features
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#pricing" className="hover:text-indigo-500">
+                    Pricing
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/#faq" className="hover:text-indigo-500">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            {/* Free Tools */}
+            <div>
+              <h4 className="text-sm font-semibold text-slate-900">
+                Free Tools
+              </h4>
+              <ul className="mt-4 space-y-2 text-sm text-slate-600">
+                <li>
+                  <a
+                    href="/free-tools/url-qr-generator"
+                    className="hover:text-indigo-500"
+                  >
+                    URL QR Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/free-tools/text-qr-generator"
+                    className="hover:text-indigo-500"
+                  >
+                    Text QR Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/free-tools/email-qr-generator"
+                    className="hover:text-indigo-500"
+                  >
+                    Email QR Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/free-tools/phone-qr-generator"
+                    className="hover:text-indigo-500"
+                  >
+                    Phone QR Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/free-tools/sms-qr-generator"
+                    className="hover:text-indigo-500"
+                  >
+                    SMS QR Code
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/free-tools/wifi-qr-generator"
+                    className="hover:text-indigo-500"
+                  >
+                    WiFi QR Code
+                  </a>
+                </li>
+              </ul>
+            </div>
 
             {/* Legal */}
             <div>
@@ -63,7 +116,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/privacy-policy"
-                    className="hover:text-[#6366f1]"
+                    className="hover:text-indigo-500"
                   >
                     Privacy Policy
                   </a>
@@ -71,7 +124,7 @@ export default function Footer() {
                 <li>
                   <a
                     href="/terms-of-service"
-                    className="hover:text-[#6366f1]"
+                    className="hover:text-indigo-500"
                   >
                     Terms of Service
                   </a>
@@ -88,14 +141,13 @@ export default function Footer() {
                 <li>
                   <a
                     href="/contact-us"
-                    className="hover:text-[#6366f1]"
+                    className="hover:text-indigo-500"
                   >
                     Contact Us
                   </a>
                 </li>
               </ul>
             </div>
-
           </div>
         </div>
 

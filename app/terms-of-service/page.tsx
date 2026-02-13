@@ -16,14 +16,14 @@ export default function TermsOfService() {
         {/* Back Button */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-white hover:text-[#6366f1] transition"
+          className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-white hover:text-indigo-500 transition"
         >
           <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           Back to Home
         </Link>
 
         <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-          Terms of <span className="text-[#6366f1]">Service</span>
+          Terms of <span className="text-indigo-500">Service</span>
         </h1>
 
         <p className="mb-6 text-sm sm:text-base text-white">

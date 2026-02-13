@@ -14,13 +14,13 @@ export default function CreditsPage() {
       <main className="mt-20 mb-10 grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <Link
           href="/privacy-policy"
-          className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-white hover:text-[#6366f1] transition"
+          className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-white hover:text-indigo-500 transition"
         >
           <ArrowLeft width={20} /> Back to Home
         </Link>
 
         <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-          <span className="text-[#6366f1]">Credits</span> & <span className="text-[#6366f1]">Attributions</span>
+          <span className="text-indigo-500">Credits</span> & <span className="text-indigo-500">Attributions</span>
         </h1>
 
         <p className="mb-8 text-sm sm:text-base text-white">
@@ -37,7 +37,7 @@ export default function CreditsPage() {
               href="https://redl.ink/dariush/links?ref=svgrepo.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6366f1] hover:underline"
+              className="text-indigo-500 hover:underline"
             >
               Dariush Habibpour
             </a>{" "}
@@ -46,7 +46,7 @@ export default function CreditsPage() {
               href="https://www.svgrepo.com/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6366f1] hover:underline"
+              className="text-indigo-500 hover:underline"
             >
               SVG Repo
             </a>.
@@ -61,7 +61,7 @@ export default function CreditsPage() {
               href="https://github.com/davidshimjs/qrcodejs"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6366f1] hover:underline"
+              className="text-indigo-500 hover:underline"
             >
               qrcodejs
             </a>{" "}
@@ -77,11 +77,27 @@ export default function CreditsPage() {
               href="https://github.com/cozmo/jsQR"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-[#6366f1] hover:underline"
+              className="text-indigo-500 hover:underline"
             >
               jsQR
             </a>{" "}
             by cozmo.
+          </p>
+        </section>
+
+        <section className="space-y-4 mt-6">
+          <h2 className="text-xl font-semibold">QR Code Styling</h2>
+          <p className="text-sm sm:text-base text-white">
+            QR code styling is powered by{" "}
+            <a
+              href="https://github.com/kozakdenys/qr-code-styling"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-indigo-500 hover:underline"
+            >
+              qr-code-styling
+            </a>{" "}
+            by Denys Kozak.
           </p>
         </section>
 

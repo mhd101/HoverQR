@@ -1,3 +1,4 @@
+import { ArrowRight } from "lucide-react";
 import Image from "next/image";
 
 export default function Hero() {
@@ -21,24 +22,24 @@ export default function Hero() {
           />
         </svg>
         <span className="text-sm font-medium opacity-80">
-          Zero-friction QR scanning
+          Scan QR without your phone. Just hover.
         </span>
       </div>
 
       {/* Headings */}
       <div>
         <h1 className="text-5xl sm:text-5xl md:text-7xl font-extrabold tracking-tight text-white">
-          <span className="text-brand">Hover<span className="text-[#6366f1]">QR</span></span>
+          <span className="text-brand">Hover<span className="text-indigo-500">QR</span></span>
         </h1>
         <h2 className="mt-2 text-2xl sm:text-3xl md:text-5xl font-semibold ">
-          Instantly <span className="text-[#6366f1]">Scan</span> & <span className="text-[#6366f1]">Generate</span>
+          Instantly <span className="text-indigo-500">Scan</span> & <span className="text-indigo-500">Generate</span>
         </h2>
       </div>
 
       {/* Description */}
       <p className="mt-6 text-base sm:text-lg max-w-2xl mx-auto text-white/80">
         Scan QR codes just by hovering. Generate them from any link or text.
-        Works everywhere—even inside videos. No clicks, no friction.
+        Works everywhere—even inside youtube videos or pdfs. No clicks, no downloads.
       </p>
 
       {/* CTA */}
@@ -51,7 +52,7 @@ export default function Hero() {
       relative inline-flex items-center gap-2
       px-6 py-3 rounded-lg
       text-base sm:text-lg font-semibold text-white
-      bg-[#6366f1]
+      bg-indigo-500
       transition-all duration-300 ease-out
       hover:-translate-y-1 hover:scale-[1.03]
       hover:shadow-[0_0_30px_rgba(99,102,241,0.65)]
@@ -64,7 +65,7 @@ export default function Hero() {
           <span
             className="
         absolute inset-0 rounded-lg
-        bg-[#6366f1]
+        bg-indigo-500
         opacity-40 blur-xl
         transition-opacity duration-300
         group-hover:opacity-70
@@ -82,9 +83,31 @@ export default function Hero() {
         </a>
       </div>
 
+      <a 
+        href="/free-tools" 
+        className="
+          mt-2 inline-flex items-center gap-2
+          px-5 py-2 rounded-lg
+          text-base sm:text-md font-medium
+          text-white/90 hover:text-white
+          border border-indigo-500/20 hover:border-indigo-500/50
+          bg-indigo-500/10 hover:bg-indigo-500/10
+          backdrop-blur-sm
+          transition-all duration-300 ease-out
+          hover:shadow-[0_0_20px_rgba(99,102,241,0.4)]
+          group
+          hover:text-lg
+        " 
+      >
+        Explore Free Tools<ArrowRight size={16} className="transition-transform duration-300 group-hover:translate-x-1" />
+      </a>
+
       <p className="mt-4 text-base sm:text-lg text-white/80">
         The fastest way to work with QR codes in your browser.
       </p>
+
+      
+      
 
     </section>
   );

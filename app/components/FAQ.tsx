@@ -45,7 +45,7 @@ export default function FAQ() {
       {/* Heading */}
       <div className="text-center max-w-2xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-white">
-          Frequently Asked <span className="text-[#6366f1]">Questions</span>
+          Frequently Asked <span className="text-indigo-500">Questions</span>
         </h2>
         <p className="mt-6 text-base md:text-lg text-white/80">
           Everything you need to know about HoverQR.
@@ -68,7 +68,7 @@ export default function FAQ() {
                   {item.q}
                 </h3>
                 <span
-                  className={`ml-4 text-[#6366f1] transition-transform duration-300 ${
+                  className={`ml-4 text-indigo-500 transition-transform duration-300 ${
                     isOpen ? "rotate-45" : ""
                   }`}
                 >

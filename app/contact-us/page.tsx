@@ -13,14 +13,14 @@ export default function ContactUs() {
         {/* Back Button */}
         <Link
           href="/"
-          className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-white hover:text-[#6366f1] transition"
+          className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-white hover:text-indigo-500 transition"
         >
           <ArrowLeft className="w-4 h-4 sm:w-5 sm:h-5" />
           Back to Home
         </Link>
 
         <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-          Contact <span className="text-[#6366f1]">Us</span>
+          Contact <span className="text-indigo-500">Us</span>
         </h1>
 
         <p className="mb-10 text-sm sm:text-base text-white">
@@ -42,7 +42,7 @@ export default function ContactUs() {
 
           <a
             href={`mailto:${email}?subject=${subject}`}
-            className="inline-flex items-center gap-3 rounded-md bg-[#6366f1] px-5 py-3 text-sm sm:text-base font-semibold text-white hover:bg-[#4f46e5] transition"
+            className="inline-flex items-center gap-3 rounded-md bg-indigo-500 px-5 py-3 text-sm sm:text-base font-semibold text-white hover:bg-indigo-500/80 transition"
           >
             <Mail className="w-5 h-5" />
             Contact via Email
@@ -50,7 +50,7 @@ export default function ContactUs() {
 
           <p className="mt-4 text-sm text-slate-400 break-all">
             Or email us directly at:{" "}
-            <span className="text-[#6366f1]">{email}</span>
+            <span className="text-indigo-500">{email}</span>
           </p>
         </section>
       </main>

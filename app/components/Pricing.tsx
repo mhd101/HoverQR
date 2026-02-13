@@ -7,8 +7,8 @@ export default function Pricing() {
       {/* Heading */}
       <div className="text-center max-w-5xl mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold text-slate-900">
-          Simple <span className="text-[#6366f1]">Pricing.</span> No{" "}
-          <span className="text-[#6366f1]">Subscriptions</span>
+          Simple <span className="text-indigo-500">Pricing.</span> No{" "}
+          <span className="text-indigo-500">Subscriptions</span>
         </h2>
         <p className="mt-6 text-slate-600 text-base md:text-lg">
           Start free. Upgrade once. Use forever.
@@ -33,11 +33,11 @@ export default function Pricing() {
 
           <ul className="mt-6 space-y-3 text-sm text-slate-700">
             <li className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[#6366f1]" />
+              <Check className="h-4 w-4 text-indigo-500" />
               Hover to scan QR codes
             </li>
             <li className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[#6366f1]" />
+              <Check className="h-4 w-4 text-indigo-500" />
               Hover to generate QR for links
             </li>
             <li className="flex items-center gap-2 text-slate-400">
@@ -67,8 +67,8 @@ export default function Pricing() {
         </div>
 
         {/* Premium Plan */}
-        <div className="relative flex flex-col rounded-2xl border-2 border-[#6366f1] bg-white p-8">
-          <span className="absolute -top-3 right-6 rounded-full bg-[#6366f1] px-3 py-1 text-xs font-medium text-white">
+        <div className="relative flex flex-col rounded-2xl border-2 border-indigo-500 bg-white p-8">
+          <span className="absolute -top-3 right-6 rounded-full bg-indigo-500 px-3 py-1 text-xs font-medium text-white">
             Best Value
           </span>
 
@@ -90,23 +90,23 @@ export default function Pricing() {
 
           <ul className="mt-6 space-y-3 text-sm text-slate-700">
             <li className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[#6366f1]" />
+              <Check className="h-4 w-4 text-indigo-500" />
               Everything in Free
             </li>
             <li className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[#6366f1]" />
+              <Check className="h-4 w-4 text-indigo-500" />
               Save history (preview, copy & download)
             </li>
             <li className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[#6366f1]" />
+              <Check className="h-4 w-4 text-indigo-500" />
               Snip & scan QR codes
             </li>
             <li className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[#6366f1]" />
+              <Check className="h-4 w-4 text-indigo-500" />
               Generate QR from any text
             </li>
             <li className="flex items-center gap-2">
-              <Check className="h-4 w-4 text-[#6366f1]" />
+              <Check className="h-4 w-4 text-indigo-500" />
               Future updates included
             </li>
           </ul>
@@ -116,7 +116,7 @@ export default function Pricing() {
               href="https://dodo.pe/hoverqr"
               target="_blank"
               rel="noopener noreferrer"
-              className="block w-full text-center rounded-lg bg-[#6366f1] py-3 font-medium text-white hover:opacity-90 transition-opacity"
+              className="block w-full text-center rounded-lg bg-indigo-500 py-3 font-medium text-white hover:opacity-90 transition-opacity"
             >
               Upgrade to Premium
             </a>

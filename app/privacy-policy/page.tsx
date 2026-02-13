@@ -14,13 +14,13 @@ export default function PrivacyPolicy() {
       <main className="mt-20 mb-10 grow max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-white hover:text-[#6366f1] transition"
+          className="inline-flex items-center gap-2 mb-6 text-sm font-medium text-white hover:text-indigo-500 transition"
         >
           <ArrowLeft width={20} /> Back to Home
         </Link>
 
         <h1 className="text-4xl sm:text-5xl font-bold mb-6">
-          Privacy <span className="text-[#6366f1]">Policy</span>
+          Privacy <span className="text-indigo-500">Policy</span>
         </h1>
 
         <p className="mb-6 text-sm sm:text-base text-white">
@@ -95,7 +95,7 @@ export default function PrivacyPolicy() {
             is provided on the{" "}
             <Link
               href="/credits"
-              className="text-[#6366f1] hover:underline"
+              className="text-indigo-500 hover:underline"
             >
               Credits
             </Link>{" "}

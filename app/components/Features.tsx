@@ -38,7 +38,7 @@ export default function Features() {
       {/* Heading */}
       <div className="text-center">
         <h2 className="text-4xl md:text-5xl font-bold">
-          Everything you need for <span className="text-[#6366f1]">QR codes</span>
+          Everything you need for <span className="text-indigo-500">QR codes</span>
         </h2>
         <p className="mt-6 text-base md:text-lg max-w-2xl mx-auto text-white/80">
           Designed to work where other QR tools fail. Seamless, instant, everywhere.
@@ -71,7 +71,7 @@ export default function Features() {
       <div className="mt-10 flex items-center justify-center gap-6">
         <button
           onClick={prev}
-          className="p-3 rounded-full border border-white/20 hover:border-[#6366f1] cursor-pointer"
+          className="p-3 rounded-full border border-white/20 hover:border-indigo-500 cursor-pointer"
         >
           <ArrowLeft className="w-5 h-5" />
         </button>
@@ -82,7 +82,7 @@ export default function Features() {
 
         <button
           onClick={next}
-          className="p-3 rounded-full border border-white/20 hover:border-[#6366f1] cursor-pointer"
+          className="p-3 rounded-full border border-white/20 hover:border-indigo-500 cursor-pointer"
         >
           <ArrowRight className="w-5 h-5" />
         </button>
