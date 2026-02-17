@@ -58,12 +58,15 @@ export default function RootLayout({
           src="https://www.googletagmanager.com/gtag/js?id=G-Q1YV0LZMHJ"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="gtag-init" strategy="afterInteractive">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
+            window.gtag = gtag;
             gtag('js', new Date());
-            gtag('config', 'G-Q1YV0LZMHJ');
+
+            gtag('config', "AW-17938295094"); // google ads
+            gtag('config', 'G-Q1YV0LZMHJ'); // google analytics
           `}
         </Script>
       </head>
