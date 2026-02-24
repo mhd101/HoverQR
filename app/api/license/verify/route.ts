@@ -1,18 +1,17 @@
 export const runtime = "nodejs";
 
 import { NextRequest, NextResponse } from "next/server";
-import { decodeToken, signToken } from "../jwt";
-
+import { verifyToken } from "../jwt";
 const DODO_API_KEY = process.env.DODO_API_KEY!;
 
 export async function POST(req: NextRequest) {
   try {
     const { token } = await req.json();
-    if (!token) throw new Error();
+    if (!token) {
+      return NextResponse.json({ error: "TOKEN_REQUIRED" }, { status: 400 });
+    }
 
-    const payload = decodeToken(token);
-
-    // 🔹 Dodo VALIDATE
+    const payload = verifyToken(token);
     const valRes = await fetch(
       "https://live.dodopayments.com/licenses/validate",
       {
@@ -28,23 +27,21 @@ export async function POST(req: NextRequest) {
     );
 
     const valData = await valRes.json();
-
-    if (!valData.valid) {
+    if (!valRes.ok || !valData.valid) {
       return NextResponse.json(
         { error: "LICENSE_INVALID" },
         { status: 401 }
       );
     }
 
-    const newToken = signToken(payload);
-
     return NextResponse.json({
-      token: newToken,
       valid: true,
+      licenseKey: payload.licenseKey,
+      deviceId: payload.deviceId,
     });
   } catch {
     return NextResponse.json(
-      { error: "REFRESH_FAILED" },
+      { error: "INVALID_OR_EXPIRED" },
       { status: 401 }
     );
   }

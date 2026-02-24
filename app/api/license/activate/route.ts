@@ -44,13 +44,11 @@ export async function POST(req: NextRequest) {
     const payload: LicensePayload = {
       licenseKey,
       deviceId,
-      premium: true,
-      usage: { history: 0, snipToScan: 0, generateQRFromSelection: 0 },
     };
 
     const token = signToken(payload);
 
-    return NextResponse.json({ token, premium: true });
+    return NextResponse.json({ token, valid: true });
   } catch {
     return NextResponse.json(
       { error: "Activation failed" },

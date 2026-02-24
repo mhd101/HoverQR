@@ -7,12 +7,6 @@ const JWT_SECRET = process.env.JWT_SECRET!;
 export interface LicensePayload {
   licenseKey: string;
   deviceId: string;
-  premium: boolean;
-  usage: {
-    history: number;
-    snipToScan: number;
-    generateQRFromSelection: number;
-  };
 }
 
 export function signToken(payload: LicensePayload) {
