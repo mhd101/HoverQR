@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 import { NextRequest, NextResponse } from "next/server";
 import { verifyToken, signToken, LicensePayload } from "../jwt";
 import { FREE_LIMITS, FeatureName } from "../limits";

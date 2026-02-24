@@ -1,3 +1,5 @@
+export const runtime = "nodejs";
+
 export const FREE_LIMITS = {
   history: 3,
   snipToScan: 3,

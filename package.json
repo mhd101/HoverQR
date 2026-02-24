@@ -9,7 +9,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@netlify/plugin-nextjs": "^5.15.7",
     "html2canvas": "^1.4.1",
     "jsonwebtoken": "^9.0.3",
     "lucide-react": "^0.563.0",
@@ -19,6 +18,7 @@
     "react-dom": "19.2.3"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^5.15.8",
     "@tailwindcss/postcss": "^4",
     "@types/jsonwebtoken": "^9.0.10",
     "@types/node": "^20",
