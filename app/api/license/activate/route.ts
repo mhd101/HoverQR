@@ -34,6 +34,13 @@ export async function POST(req: NextRequest) {
 
     const actData = await actRes.json();
 
+    if (actRes.status === 404) {
+      return NextResponse.json(
+        { error: "License key is invalid" },
+        { status: 404 }
+      );
+    }
+
     if (!actRes.ok) {
       return NextResponse.json(
         { error: actData.message || "Activation failed" },
