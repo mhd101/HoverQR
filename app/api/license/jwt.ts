@@ -8,6 +8,7 @@ export interface LicensePayload {
   licenseKey: string;
   deviceId: string;
   name?: string;
+  id?: string;
 }
 
 export function signToken(payload: LicensePayload) {

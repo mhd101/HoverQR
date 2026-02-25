@@ -38,6 +38,8 @@ export async function POST(req: NextRequest) {
       valid: true,
       licenseKey: payload.licenseKey,
       deviceId: payload.deviceId,
+      name: payload.name,
+      id: payload.id,
     });
   } catch {
     return NextResponse.json(
