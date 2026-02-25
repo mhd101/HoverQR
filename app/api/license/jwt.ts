@@ -7,6 +7,7 @@ const JWT_SECRET = process.env.JWT_SECRET!;
 export interface LicensePayload {
   licenseKey: string;
   deviceId: string;
+  name?: string;
 }
 
 export function signToken(payload: LicensePayload) {

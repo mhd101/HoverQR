@@ -44,6 +44,7 @@ export async function POST(req: NextRequest) {
     const payload: LicensePayload = {
       licenseKey,
       deviceId,
+      name
     };
 
     const token = signToken(payload);
