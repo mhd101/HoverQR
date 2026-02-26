@@ -1,14 +1,19 @@
 export const runtime = "nodejs";
 
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { verifyToken } from "../jwt";
+import { corsJson, corsOptions } from "../cors";
 const DODO_API_KEY = process.env.DODO_API_KEY!;
+
+export async function OPTIONS() {
+  return corsOptions();
+}
 
 export async function POST(req: NextRequest) {
   try {
     const { token } = await req.json();
     if (!token) {
-      return NextResponse.json({ error: "TOKEN_REQUIRED" }, { status: 400 });
+      return corsJson({ error: "TOKEN_REQUIRED" }, 400);
     }
 
     const payload = verifyToken(token);
@@ -28,13 +33,13 @@ export async function POST(req: NextRequest) {
 
     const valData = await valRes.json();
     if (!valRes.ok || !valData.valid) {
-      return NextResponse.json(
+      return corsJson(
         { error: "LICENSE_INVALID" },
-        { status: 401 }
+        401
       );
     }
 
-    return NextResponse.json({
+    return corsJson({
       valid: true,
       licenseKey: payload.licenseKey,
       deviceId: payload.deviceId,
@@ -42,9 +47,9 @@ export async function POST(req: NextRequest) {
       id: payload.id,
     });
   } catch {
-    return NextResponse.json(
+    return corsJson(
       { error: "INVALID_OR_EXPIRED" },
-      { status: 401 }
+      401
     );
   }
 }

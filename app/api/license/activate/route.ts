@@ -1,18 +1,23 @@
 export const runtime = "nodejs";
 
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { signToken, LicensePayload } from "../jwt";
+import { corsJson, corsOptions } from "../cors";
 
 const DODO_API_KEY = process.env.DODO_API_KEY!;
+
+export async function OPTIONS() {
+  return corsOptions();
+}
 
 export async function POST(req: NextRequest) {
   try {
     const { licenseKey, deviceId, name } = await req.json();
 
     if (!licenseKey || !deviceId) {
-      return NextResponse.json(
+      return corsJson(
         { error: "Missing licenseKey or deviceId" },
-        { status: 400 }
+        400
       );
     }
 
@@ -35,16 +40,16 @@ export async function POST(req: NextRequest) {
     const actData = await actRes.json();
 
     if (actRes.status === 404) {
-      return NextResponse.json(
+      return corsJson(
         { error: "License key is invalid" },
-        { status: 404 }
+        404
       );
     }
 
     if (!actRes.ok) {
-      return NextResponse.json(
+      return corsJson(
         { error: actData.message || "Activation failed" },
-        { status: 401 }
+        401
       );
     }
 
@@ -57,11 +62,11 @@ export async function POST(req: NextRequest) {
 
     const token = signToken(payload);
 
-    return NextResponse.json({ token, valid: true });
+    return corsJson({ token, valid: true });
   } catch {
-    return NextResponse.json(
+    return corsJson(
       { error: "Activation failed" },
-      { status: 500 }
+      500
     );
   }
 }

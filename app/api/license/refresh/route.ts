@@ -1,9 +1,14 @@
 export const runtime = "nodejs";
 
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { decodeToken, signToken } from "../jwt";
+import { corsJson, corsOptions } from "../cors";
 
 const DODO_API_KEY = process.env.DODO_API_KEY!;
+
+export async function OPTIONS() {
+  return corsOptions();
+}
 
 export async function POST(req: NextRequest) {
   try {
@@ -30,22 +35,22 @@ export async function POST(req: NextRequest) {
     const valData = await valRes.json();
 
     if (!valData.valid) {
-      return NextResponse.json(
+      return corsJson(
         { error: "LICENSE_INVALID" },
-        { status: 401 }
+        401
       );
     }
 
     const newToken = signToken(payload);
 
-    return NextResponse.json({
+    return corsJson({
       token: newToken,
       valid: true,
     });
   } catch {
-    return NextResponse.json(
+    return corsJson(
       { error: "REFRESH_FAILED" },
-      { status: 401 }
+      401
     );
   }
 }

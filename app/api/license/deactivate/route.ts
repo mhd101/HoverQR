@@ -1,18 +1,23 @@
 export const runtime = "nodejs";
 
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { decodeToken } from "../jwt";
+import { corsJson, corsOptions } from "../cors";
 
 const DODO_API_KEY = process.env.DODO_API_KEY!;
+
+export async function OPTIONS() {
+  return corsOptions();
+}
 
 export async function POST(req: NextRequest) {
   try {
     const { token } = await req.json();
 
     if (!token) {
-      return NextResponse.json(
+      return corsJson(
         { error: "TOKEN_REQUIRED" },
-        { status: 400 }
+        400
       );
     }
 
@@ -21,9 +26,9 @@ export async function POST(req: NextRequest) {
     const license_key_instance_id = payload.id;
 
     if (!license_key || !license_key_instance_id) {
-      return NextResponse.json(
+      return corsJson(
         { error: "INVALID_OR_EXPIRED" },
-        { status: 401 }
+        401
       );
     }
 
@@ -43,18 +48,18 @@ export async function POST(req: NextRequest) {
     );
 
     if (deactRes.status === 200) {
-      return NextResponse.json({ deleted: true, success: true });
+      return corsJson({ deleted: true, success: true });
     }
 
     const deactData = await deactRes.json().catch(() => null);
-    return NextResponse.json(
+    return corsJson(
       { error: deactData?.message || "Deactivation failed" },
-      { status: deactRes.status || 401 }
+      deactRes.status || 401
     );
   } catch {
-    return NextResponse.json(
+    return corsJson(
       { error: "Deactivation failed" },
-      { status: 500 }
+      500
     );
   }
 }
