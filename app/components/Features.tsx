@@ -10,6 +10,7 @@ const features = [
   { id: "history", title: "Save QR History", video: "/videos/SaveHistory.webm" },
   { id: "snip", title: "Snip & Scan QR", video: "/videos/SnipToScan.webm" },
   { id: "text", title: "Generate QR from Text", video: "/videos/SelectToGenerate.webm" },
+  { id: "custom-qr", title: "QR Customization", video: "/videos/CustomQR.webm" }
 ];
 
 export default function Features() {

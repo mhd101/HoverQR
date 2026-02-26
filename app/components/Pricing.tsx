@@ -46,11 +46,15 @@ export default function Pricing() {
             </li>
             <li className="flex items-center gap-2 text-slate-400">
               <X className="h-4 w-4" />
+              Generate Custom QR
+            </li>
+            <li className="flex items-center gap-2 text-slate-400">
+              <X className="h-4 w-4" />
               Snip & scan QR
             </li>
             <li className="flex items-center gap-2 text-slate-400">
               <X className="h-4 w-4" />
-              Generate QR from text
+              Generate QR from selection
             </li>
           </ul>
 
@@ -95,7 +99,11 @@ export default function Pricing() {
             </li>
             <li className="flex items-center gap-2">
               <Check className="h-4 w-4 text-indigo-500" />
-              Save history (preview, copy & download)
+              Save history (preview, customization & download)
+            </li>
+            <li className="flex items-center gap-2">
+              <Check className="h-4 w-4 text-indigo-500" />
+              Generate custom QR
             </li>
             <li className="flex items-center gap-2">
               <Check className="h-4 w-4 text-indigo-500" />
