@@ -70,7 +70,7 @@ export default function Testimonials() {
                 <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 backdrop-blur-sm">
                     <span className="text-sm font-medium text-indigo-400">Wall of Love</span>
                 </div>
-                <h2 className="text-3xl sm:text-4xl md:text-5xl px-2 font-extrabold tracking-tight text-white mb-6 leading-tight">
+                <h2 className="text-4xl sm:text-5xl md:text-6xl px-2 font-extrabold tracking-tight text-white mb-6 leading-tight">
                     Users love <span className="text-indigo-500">HoverQR</span>
                 </h2>
                 <p className="mt-6 text-lg sm:text-xl px-4 text-white/60 font-light">

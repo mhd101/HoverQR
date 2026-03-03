@@ -57,7 +57,7 @@ export default function FAQ() {
         <div className="inline-block mb-4 px-4 py-1.5 rounded-full bg-indigo-500/10 border border-indigo-500/20 backdrop-blur-sm">
           <span className="text-sm font-medium text-indigo-400">FAQ</span>
         </div>
-        <h2 className="text-3xl px-2 sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-tight">
+        <h2 className="text-4xl px-2 sm:text-5xl md:text-6xl font-extrabold tracking-tight text-white mb-6 leading-tight">
           Frequently Asked <span className="text-indigo-500">Questions</span>
         </h2>
         <p className="mt-6 text-lg md:text-xl px-4 text-white/60 font-light">
