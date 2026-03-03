@@ -71,7 +71,7 @@ export default function RootLayout({
         </Script>
       </head>
       <body
-        className={`${inter.variable} antialiased`}
+        className={`${inter.variable} antialiased bg-slate-900 text-white`}
       >
         {children}
       </body>
